@@ -23,6 +23,8 @@ module Xmldsig
           Transforms::Canonicalize.new(node, transform_node, true)
         when "http://www.w3.org/TR/1999/REC-xpath-19991116"
           Transforms::XPath.new(node, transform_node)
+        when "http://docs.oasis-open.org/wss/oasis-wss-SwAProfile-1.1#Attachment-Content-Signature-Transform"
+          Transforms::Mime.new(node, transform_node)
       end
     end
 
