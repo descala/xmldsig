@@ -34,7 +34,7 @@ module Xmldsig
     def valid?(certificate = nil, schema = nil, &block)
       @errors = []
       references.each { |r| r.errors = [] }
-      validate_schema(schema)
+      #validate_schema(schema)
       validate_digest_values
       validate_signature_value(certificate, &block)
       errors.empty?

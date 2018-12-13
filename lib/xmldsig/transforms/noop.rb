@@ -1,6 +1,6 @@
 module Xmldsig
   class Transforms < Array
-    class Mime < Transform
+    class Noop < Transform
       def transform
         node
       end
